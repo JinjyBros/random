@@ -5,23 +5,73 @@ var namespace = "http://www.w3.org/2000/svg"
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createFirstScene() {
-    
+   var number = Math.random()
+   if(number<0.5){
+    makeRect(0, 0, 200, 100, "white", 1)
+   makeRect(0, 0, 200, 100, "blue", 0.25) 
+   makeCircle(100, 25, 25, "white", 1)
+   makeCircle(100, 25, 25, "orange", 0.5)
+   makeCircle(100, 25, 25, "yellow", 0.25)
+   makeEllipse(100, 105, 125, 50, "white", 1)
+   makeEllipse(100, 105, 125, 50, "green", 0.5)
+makeImage("http://www.flytesystems.com/wp-content/uploads/2014/06/airplane-flying.png", 2.5, 0, 50, 50, 1)
+} else {
+     makeRect(0, 0, 200, 100, "white", 1)
+   makeRect(0, 0, 200, 100, "blue", 0.25) 
+   makeCircle(100, 25, 25, "white", 1)
+   makeCircle(100, 25, 25, "orange", 0.5)
+   makeCircle(100, 25, 25, "yellow", 0.25)
+   makeEllipse(100, 105, 125, 50, "white", 1)
+   makeEllipse(100, 105, 125, 50, "green", 0.5)
+    makeEllipse(25, 25, 15, 5, "white", 1)
+    makeEllipse(175, 35, 15, 5, "white", 1)
+   
 }
+}
+
+// Fill in this function so that it draws something using SVG shapes!
+// You need to use at least 3 different types of shape.
+// Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
+function createSecondScene(){
+    var number = Math.random()
+    if(number<0.5){
+    makeRect(0, 0, 200, 100, "white", 1)
+   makeRect(0, 0, 200, 100, "blue", 0.1)
+makeImage("http://popcrush.com/files/2017/02/cash-me-outside-how-bow-dah.jpg?w=630&h=420&zc=1&s=0&a=t&q=89", 25, 25, 50, 50, 1)
+makeImage("https://i.ytimg.com/vi/nytzHVEHLLs/hqdefault.jpg", 125, 20, 100, 50, 1)
+makeText("Dank Memes", 50, 15, 10, "sans-serif", "navy", 0.4)
+    }else{
+    makeRect(0, 0, 200, 100, "white", 1)
+   makeRect(0, 0, 200, 100, "blue", 0.1)
+makeImage("http://i3.kym-cdn.com/photos/images/original/001/102/474/a6c.jpeg", 75, 25, 150, 75, 1)
+makeImage("https://i.ytimg.com/vi/oNVfrxkHj1M/maxresdefault.jpg", 15, 25, 100, 75, 1)
+makeText("Dank Memes", 50, 15, 10, "sans-serif", "navy", 0.4)
+
+    }
+}       
 
 
 // Fill in this function so that it draws something using SVG shapes!
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
-function createSecondScene() {
-    
-}
-
-
-// Fill in this function so that it draws something using SVG shapes!
-// You need to use at least 3 different types of shape.
-// Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
-function createThirdScene() {
-    
+function createThirdScene(){
+    var number=Math.random()
+    if(number<0.5){
+    makeRect(0, 0, 200, 100, "white", 1)
+    makeRect(0, 0, 200, 100, "blue", 0.1)
+    makeLine(0, 0, 0, 200, "black", 5, 0.3)
+    makeText("Bienvenue à Québec", 50, 50, 10, "sans-serif", "navy", 0.4)
+    makeText("Parlez-vous français ?", 50, 60, 10, "sans-serif", "navy", 0.4)
+makeImage("https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Flag_of_Quebec_(1-2).svg/1280px-Flag_of_Quebec_(1-2).svg.png", 2.5, 0, 50, 50, 1)
+    }else{
+        makeRect(0, 0, 200, 100, "white", 1)
+    makeRect(0, 0, 200, 100, "blue", 0.1)
+    makeLine(0, 0, 0, 200, "black", 5, 0.3)
+    makeText("Bienvenue à Québec", 50, 50, 10, "sans-serif", "navy", 0.4)
+    makeText("Nous n'aimons pas l'anglais", 50, 60, 10, "sans-serif", "navy", 0.4)
+makeImage("https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Flag_of_Quebec_(1-2).svg/1280px-Flag_of_Quebec_(1-2).svg.png", 2.5, 0, 50, 50, 1)
+    }
+        
 }
 
 
@@ -32,7 +82,14 @@ function createThirdScene() {
 // This function is called whenever you press the "Go!" button.
 function createRandomScene() {
     // Generate a random number between 0 and 1, and store it in a variable.
-    
+    var thing1 = Math.random()
+if (thing1<0.33)  {
+  createFirstScene()
+} else if (thing1 > 0.67) {
+  createSecondScene()
+} else {
+  createThirdScene()
+}
     // If the number is less than 0.33, call the function to create your first scene.
     
     
